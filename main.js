@@ -1005,11 +1005,10 @@ loader.load(
       if (node.isMesh) {
         node.castShadow = true;
 
-        // Check if the material name matches any of our textures
         const materialName = node.material.name;
         if (textures[materialName]) {
           node.material.map = textures[materialName];
-          node.material.needsUpdate = true; // Ensure the material updates with the new texture
+          node.material.needsUpdate = true;
         }
       }
     });
